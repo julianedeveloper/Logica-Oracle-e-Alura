@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<script>
+    let nowadays = 2022;
+    let discovery = 1500;
+    let mediaYears = nowadays - discovery;
+    let mediaGenerations = mediaYears/28;
+
+    function pulaLinha(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    document.write("Since of " + discovery + " , " + mediaYears + "  has past.")
+    pulaLinha();
+
+    mostra("Since then there were " + Math.round(mediaGenerations) + " generation in our country.");
+    pulaLinha();
+
+    document.write("Interesting, right?");
+    
+</script>
