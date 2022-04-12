@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha(){
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var vitorias = parseInt(prompt("Entre com o número de vitórias:"));
+    var empates = parseInt(prompt("Agora, entre com o número de empates:"));
+
+    //cada vitória vale 3 pontos e cada empate vale 1 pontos;
+
+    var pontos = vitorias * 3 + empates; //por entre parênteses a multiplicação é opcional, visto que o programa já vai fazer a multiplicação primeiro.//
+
+    mostra("Os pontos do seu time são: " + pontos);
+    pulaLinha();
+</script>

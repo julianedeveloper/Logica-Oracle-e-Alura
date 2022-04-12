@@ -1,5 +1,4 @@
-<meta charset="UTF-8">
-<script>
+
     /*
     function pularLinha() {
         document.write("<br>");
@@ -25,13 +24,6 @@
 
     /* Mas ao invés de precisar redigitar a linha de código para cálculo de imc é criar uma funcção contendo esse cálculo a ser feito, e estipular dois parâmetros para servirem de direção a instrução de cálculo.*/
 
-    function pularLinha() {
-        document.write("<br>");
-        document.write("<hr>");
-    }
-    function mostrar(frase){
-        document.write(frase);
-    }
     /*
     function calculaImc(nome, peso, altura) {
         let imc = peso / (altura*altura);
@@ -47,6 +39,13 @@
     calculaImc("Jaqueline", 45, 1.65);
     pularLinha();
     */
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha(){
+        document.write("<br>");
+        document.write("<hr>");
+    }
 
     function calculaImc(altura, peso) {
         return peso / ( altura * altura );
@@ -54,18 +53,25 @@
     function mostrar(frase) {
         document.write(frase);
     }
-
+    
     var nome = prompt("Qual seu nome?");
-    var peso = prompt( nome + " qual sua altura?");
-    var altura = prompt( nome + "  qual seu peso?");
-    var imc = calculaImc(1.75, 71);
+    var altura = prompt( nome + " qual sua altura?");
+    var peso = prompt( nome + "  qual seu peso?");
+    var imc = calculaImc(altura,peso);
 
     mostrar(nome + " seu IMC atualmente é " + imc);
-    pularLinha();
+    pulaLinha();
+
+    if(imc < 18.5){
+        mostrar("Você está abaixo do peso recomendado.");
+    } 
     
+    if(imc > 35){
+        mostrar("Você está acima do peso recomendado.")
+    }
 
-
-
-
-
+    if (imc >= 18.5 && imc <= 35) {
+            mostrar(" Você está dentro do peso recomendado.");
+    }
+    
 </script>

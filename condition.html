@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha(){
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var vitorias = parseInt(prompt("Entre com o número de vitórias:"));
+    var empates = parseInt(prompt("Agora, entre com o número de empates:"));
+    var pontos = vitorias * 3 + empates; 
+
+    mostra("Os pontos do seu time são: " + pontos);
+    pulaLinha();
+
+    if (pontos==28){
+        mostra("Seu time manteve a classificação.");
+    }
+    if(pontos<28){
+        mostra("Seu time caiu na classificação.");
+    }
+    if(pontos>28){
+      mostra("Parabéns! Seu time subiu na classificação.");
+    }
+    pulaLinha();
+    mostra("FIM");
+    
+</script>
