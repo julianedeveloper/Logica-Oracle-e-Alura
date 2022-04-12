@@ -1,0 +1,71 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    function pularLinha() {
+        document.write("<br>");
+        document.write("<hr>");
+    }
+    function mostrar(frase){
+        document.write(frase);
+    }
+
+    let altura=  1.62;
+    let peso= 57;
+    let imc= peso/(altura*altura);
+
+    mostrar("O IMC de Juliane é " + Math.round(imc));
+    pularLinha();
+
+    let alturaAmigo = 1.75;
+    let pesoAmigo = 71;
+    let imc = peso / (altura*altura);
+
+    mostrar("O IMC do amigo é " + Math.round(imc));
+    */
+
+    /* Mas ao invés de precisar redigitar a linha de código para cálculo de imc é criar uma funcção contendo esse cálculo a ser feito, e estipular dois parâmetros para servirem de direção a instrução de cálculo.*/
+
+    function pularLinha() {
+        document.write("<br>");
+        document.write("<hr>");
+    }
+    function mostrar(frase){
+        document.write(frase);
+    }
+    /*
+    function calculaImc(nome, peso, altura) {
+        let imc = peso / (altura*altura);
+        mostrar(" O IMC de " + nome + " é " + imc);
+    }
+
+    calculaImc("Juliane", 57, 1.62);
+    pularLinha();
+
+    calculaImc("Gisele", 50, 1.68);
+    pularLinha();
+
+    calculaImc("Jaqueline", 45, 1.65);
+    pularLinha();
+    */
+
+    function calculaImc(altura, peso) {
+        return peso / ( altura * altura );
+    }
+    function mostrar(frase) {
+        document.write(frase);
+    }
+
+    var nome = prompt("Qual seu nome?");
+    var peso = prompt( nome + " qual sua altura?");
+    var altura = prompt( nome + "  qual seu peso?");
+    var imc = calculaImc(1.75, 71);
+
+    mostrar(nome + " seu IMC atualmente é " + imc);
+    pularLinha();
+    
+
+
+
+
+
+</script>
