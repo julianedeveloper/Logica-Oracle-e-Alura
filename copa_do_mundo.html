@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<h3 style="font-family: sans-serif; font-weight: bolder; letter-spacing: 5px;">Saiba os anos de copa mundial</h3>
+
+<script>
+    function pulaLinha(){
+        document.write("<br> <br>");
+    }
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    let anoLimite = parseInt(prompt("Digite o ano limite de busca."));
+    let anoCopa = 1930;
+
+    while (anoCopa <= anoLimite){
+
+        mostra("Teve copa em " + anoCopa);
+        anoCopa = anoCopa + 4;
+    }
+
+    mostra("Fim.");
+
+</script>

@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(){
+        document.write("<br> <br>");
+    }
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+    var quantidadeFamiliares = parseInt(prompt("Quantos parentes você tem?"));
+    var num = 1;
+    var totalIdades = 0; 
+    // essa inicialização acima, PRECISA ser fora do while, para acumular valores.
+
+    while(num <= quantidadeFamiliares){
+        var idadeFamiliar = parseInt(prompt("Informe a idade do familiar"));
+        totalIdades = totalIdades + idadeFamiliar;
+        num ++;
+    }
+    var mediaDasIdades = totalIdades/quantidadeFamiliares;
+    mostra(" A média das idades entre seus parentes é: " + Math.round(mediaDasIdades));
+    mostra("Fim.")
+
+    </script>
+
+
