@@ -1,0 +1,70 @@
+<meta charset="UTF-8">
+<input/>
+<button>discover my secret</button>
+
+<script>
+
+    function sorteia(){
+        return (Math.round(Math.random() * 10));
+    }
+
+    function sorteiaNumeros (quantidade){
+        var segredos = []; // variavel começa vazia
+        var numero = 0; // variavel pra nortear a contagem de entradas a serem feitas
+
+        while(numero <= quantidade){
+            var numeroAleatorio = sorteia(); // aqui eu sorteio um numero aleatório
+            var achou = false; // aqui eu digo que ainda não encontrei numero na minha lista de segredos
+
+            for(var posicao = 0; posicao < segredos.length; posicao++){ //aqui eu percorro a minha lista de segredos para saber se o numero que eu gerei (numeroAleatorio) está dentro.
+                if (segredos[posicao] == numeroAleatorio){
+                    achou = true;
+                    break;
+                }
+            }
+                if (achou == false){
+                    segredos.push[numeroAleatorio];
+                    numero ++;
+                }
+        }
+            return(segredos);
+    }
+
+
+    var segredos = sorteiaNumeros(3);   //boa prática é nomear arrays on plural.
+    //segredos.push[sorteia()];
+    //segredos.push[sorteia()];
+    //segredos.push[sorteia()];
+    
+    
+    console.log(segredos); //mensagem para desenvolvedor
+
+    var input = document.querySelector("input");
+    input.focus(); //já deixa o cursor piscando
+
+    var achou = false;
+
+    function verifica(){
+
+        for (var posicao = 0; posicao < segredos.length; posicao ++){ 
+            
+            if(input.value == segredos[posicao]){    //segredos está sendo comparado com posicao
+                alert("Você acertou!");
+                achou = true;
+                break;      //como houve acerto, encerra-se a condição
+            } 
+            if(achou == false){
+
+                alert("Você errou!");
+                break;
+            }
+        }
+
+            input.value = ""; //limpa o campo de texto
+            input.focus();     // deixa o cursor piscando
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verifica;
+    
+</script>
