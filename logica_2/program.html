@@ -1,0 +1,8 @@
+<canvas width="600" height="400"></canvas>
+<script>
+    var tela = document.querySelector('canvas'); // here I call canvas tag on html
+    var pincel =  tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgrey'; // as a variable, fillStyle receive values. But, as the real world, we can't change the color without the color first. So, the color comes first. 
+    pincel.fillRect (0,0,600,400);
+</script>
