@@ -1,0 +1,37 @@
+<canvas width="600" height="400"></canvas>
+
+
+<script>
+    
+    function drawnGreenRectangule (x, y, color, stroke){
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = color;
+        pincel.fillRect(x, y, 50, 50);
+        pincel.strokeStyle = stroke;
+        pincel.strokeRect(x, y, 50, 50);
+    }
+/*
+        var x = 0;
+            while (x < 600){
+
+                drawnGreenRectangule(x, 0, 'lightblue');
+                drawnGreenRectangule(x, 50, 'orange');
+                drawnGreenRectangule(x, 100, 'lightgreen');
+                x = x + 50;
+            }
+*/
+/*        for (var x = 0; x < 600; x = x + 50){
+            drawnGreenRectangule(x, 0, 'lightblue');
+            drawnGreenRectangule(x, 50, 'orange');
+            drawnGreenRectangule(x, 100, 'lightgreen');
+        }
+*/
+
+        drawnGreenRectangule(100, 200, 'lightgreen', 'black');
+        drawnGreenRectangule(150, 200, 'lightgreen', 'black');
+        drawnGreenRectangule(200, 200, 'lightgreen', 'black');
+        drawnGreenRectangule(250, 200, 'white', 'black');
+</script>
