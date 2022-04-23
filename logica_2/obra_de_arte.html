@@ -34,8 +34,8 @@
         var y = evento.pageY - tela.offsetTop;
 
         if(desenha) {
+                desenhaCirculo(x, y, 5, corAtual);
 
-            desenhaCirculo(x, y, 5, corAtual);
         }
     }
 
@@ -48,6 +48,43 @@
 
         desenha = false;
     }
+
+    function podeDesenharNaArea(x, y) {
+
+        if (x >= 0 && x < 3*tamanhoQuadrados && y >= 0 && y < tamanhoQuadrados) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function selecionaCor(evento) {
+
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+
+        // agora que sei onde o usuário clicou, posso verificar em qual cor da paleta ele esta clicando!
+
+        // cada condição muda a variável `corAtual`
+
+        // começamos pela condição do y que é igual em todos os casos
+        if (y > yQuadrados && y < yQuadrados + tamanhoQuadrados) {
+
+            if (x > xVermelho && x < xVermelho + tamanhoQuadrados) {
+
+                corAtual = 'red'; // mudar a corAtual
+
+            } else if (x > xVerde && x < xVerde + tamanhoQuadrados) {
+
+                corAtual = 'green';
+
+            } else if (x > xAzul && x < xAzul + tamanhoQuadrados) {
+
+                corAtual = 'blue';
+            }
+        }
+    }
+            
 
     var tela = document.querySelector('canvas');
     var pincel = tela.getContext('2d');
@@ -69,5 +106,7 @@
     tela.onmousedown = habilitaDesenhar;
 
     tela.onmouseup = desabilitaDesenhar;
+
+    tela.onclick = selecionaCor;
 
 </script>
